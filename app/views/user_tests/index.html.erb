@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "User tests" %>
+
+<h1>User tests</h1>
+
+<div id="user_tests">
+  <% @user_tests.each do |user_test| %>
+    <%= render user_test %>
+    <p>
+      <%= link_to "Show this user test", user_test %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New user test", new_user_test_path %>

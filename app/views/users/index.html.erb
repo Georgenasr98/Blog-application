@@ -1,0 +1,14 @@
+<!-- app/views/users/index.html.erb -->
+<div id="users">
+  <% @users.each do |user| %>
+    <div id="<%= dom_id(user) %>">
+      <p>
+        <strong>Name:</strong>
+        <%= user.name %>
+      </p>
+      <p>
+        <%= link_to "Show this user", user %>
+      </p>
+    </div>
+  <% end %>
+</div>
